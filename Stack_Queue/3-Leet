@@ -1,0 +1,27 @@
+// class Solution {
+// public:
+//     int lengthOfLongestSubstring(string s) {
+//         queue<char> q;
+//         map<char, bool> m;
+//         int ans = 0;
+//         for(char c : s){
+//             if(!m[c]){
+//                 q.push(c);
+//                 m[c] = true;
+//             }else{
+//                 while(q.front() != c){
+
+//                     m[q.front()] = false;
+//                     q.pop();
+//                 }
+//                 m[q.front()] = false;
+//                 q.pop();
+
+//                 q.push(c);
+//                 m[c] = true;
+//             }
+//             ans = max(ans, (int)q.size());
+//         }
+//         return ans;
+//     }
+// };
